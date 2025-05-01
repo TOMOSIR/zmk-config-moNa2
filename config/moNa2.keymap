@@ -28,6 +28,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        atmark: atmark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "ATMARK";
+        };
     };
 
     behaviors {
@@ -54,13 +61,13 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp Q         &kp L         &kp U                &kp F                                             &kp W                   &kp R  &kp Y  &mkp MB1  &mkp MB2
-&kp A    &kp E         &kp I         &kp A                &kp O        &trans                &kp K          &kp T                   &kp N  &kp S  &kp H     &kp ENTER
-&kp Z    &kp Z         &kp X         &kp C                &kp V        &lt 4 COLON           &kp G          &kp D                   &kp M  &kp J  &kp B     &kp P
-&kp ESC  &kp LEFT_WIN  &kp LEFT_ALT  &mt LCMD INT_HENKAN  &lt 2 SPACE  &lt 3 INT_MUHENKAN    &kp BACKSPACE  &mt RCMD LANG_HIRAGANA                          &mt RIGHT_SHIFT SLASH
+&kp Q           &kp W      &kp E         &kp R     &kp T                                      &kp Y     &kp U  &kp I     &kp O     &kp P
+&kp A           &kp S      &kp D         &kp F     &kp G        &trans       &kp K            &kp H     &kp J  &kp K     &kp L     &lt 5 ENTER
+&kp Z           &kp X      &kp C         &kp V     &kp B        &kp COMMA    &kp PERIOD       &kp N     &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
+&kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &lt 1 SPACE  &lt 2 TAB    &lt 3 BACKSPACE  &kp RCMD                             &lt 4 ESC
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(S) LC(A)>;
+            sensor-bindings = <&inc_dec_kp LC(A) LC(S)>;
         };
 
         layer_1 {
