@@ -16,8 +16,8 @@
         compatible = "zmk,combos";
 
         scroll {
-            bindings = <&msc MOVE_Y(20)>;
-            key-positions = <33 32>;
+            bindings = <&mo 6>;
+            key-positions = <31 32>;
         };
     };
 
